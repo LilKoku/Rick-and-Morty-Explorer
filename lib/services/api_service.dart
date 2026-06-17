@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 
-import '../../../rick_and_morty_explorer/lib/models/character.dart';
+import '../models/character.dart';
 
 class ApiService {
   static const String baseUrl =
