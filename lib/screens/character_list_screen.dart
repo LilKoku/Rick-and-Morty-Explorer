@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 
 import '../models/character.dart';
 import '../services/api_service.dart';
-import '../../../projekt_test/lib/services/hive_service.dart';
-import '../../../projekt_test/lib/widgets/character_card.dart';
-import '../../../projekt_test/lib/screens/character_details_screen.dart';
+import '../services/hive_service.dart';
+import '../widgets/character_card.dart';
+import 'character_details_screen.dart';
 
 class CharacterListScreen extends StatefulWidget {
   const CharacterListScreen({super.key});
@@ -43,13 +43,6 @@ class _CharacterListScreenState
           data.map((e) => e.toJson()).toList(),
         ),
       );
-
-      for (final character in data) {
-        await box.put(
-          'character_${character.id}',
-          character.toJson(),
-        );
-      }
 
       setState(() {
         characters = data;

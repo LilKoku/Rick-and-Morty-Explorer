@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../projekt_test/lib/screens/character_list_screen.dart';
-import '../../projekt_test/lib/services/hive_service.dart';
+import 'screens/character_list_screen.dart';
+import 'services/hive_service.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
